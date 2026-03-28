@@ -16,10 +16,10 @@ export default function Experience() {
         {timeline.map((item, index) => (
           <div key={index} className="mb-8 pl-6 relative">
             {/* Timeline Dot */}
-            <span className="absolute -left-[9px] top-1 w-4 h-4 rounded-full bg-gray-600 dark:bg-blue-500 border-4 border-white dark:border-[#1E293B]"></span>
+            <span className="absolute -left-[9px] top-1 w-4 h-4 rounded-full bg-gray-600 dark:bg-blue-600 border-4 border-white dark:border-[#1E293B]"></span>
             
             <h3 className="font-bold text-gray-800 dark:text-white text-md">{item.title}</h3>
-            <span className="text-xs font-semibold text-gray-600 dark:text-blue-400 mb-1 block">{item.year}</span>
+            <span className="text-xs font-semibold text-gray-600 dark:text-blue-600 mb-1 block">{item.year}</span>
             <p className="text-sm text-gray-600 dark:text-gray-400 mt-1">{item.desc}</p>
           </div>
         ))}

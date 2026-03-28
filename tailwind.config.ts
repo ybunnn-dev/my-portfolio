@@ -13,7 +13,7 @@ const config: Config = {
       },
       colors: {
         dark_gradient: "#111F35", 
-        light_gradient: "#0E21A0", 
+        light_gradient: "#0e1e8a", 
         light_dark_gradient: "#676767", 
         light_light_gradient: "#CDCDCD", 
         header_text: "#4F4D4D",
