@@ -53,7 +53,7 @@ export default function ProfileCard({ data }: ProfileCardProps) {
           {/* Buttons & Icons Row */}
           <div className="flex flex-wrap items-center justify-center sm:justify-start gap-4 mt-2">
             
-            <button className="bg-gray-500 hover:bg-gray-700 text-white text-sm px-4 py-2 rounded-md font-medium transition-colors">
+            <button className="bg-gray-500 hover:bg-gray-700 text-white text-sm px-4 py-2 rounded-md font-medium transition-colors font-semibold">
               Download CV
             </button>
             
