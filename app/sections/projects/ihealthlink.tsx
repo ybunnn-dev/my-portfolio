@@ -4,11 +4,11 @@ import { useState } from "react";
 import { ChevronLeft, ChevronRight, Calendar, User, Layers, CheckCircle2 } from "lucide-react";
 
 const PROJECT_IMAGES = [
-  { id: 1, src: "/projects/ihealthlink/dash.jpg", color: "bg-blue-100/20", title: "Main Dashboard" },
-  { id: 2, src: "/projects/ihealthlink/enroll.jpg", color: "bg-cyan-100/20", title: "Resident Enrollment" },
-  { id: 3, src: "/projects/ihealthlink/sync.jpg", color: "bg-sky-100/20", title: "Mobile Sync Module" },
-  { id: 4, src: "/projects/ihealthlink/records.jpg", color: "bg-teal-100/20", title: "Health Records" },
-  { id: 5, src: "/projects/ihealthlink/mobile1.jpg", color: "bg-indigo-100/20", title: "Flutter App View" },
+  { id: 1, src: "/projects/ihealthlink/dashboard.png", color: "bg-blue-100/20", title: "Main Dashboard" },
+  { id: 2, src: "/projects/ihealthlink/reports.png", color: "bg-cyan-100/20", title: "Resident Enrollment" },
+  { id: 3, src: "/projects/ihealthlink/resident.png", color: "bg-sky-100/20", title: "Mobile Sync Module" },
+  { id: 4, src: "/projects/ihealthlink/maternity.png", color: "bg-teal-100/20", title: "Health Records" },
+  { id: 5, src: "/projects/ihealthlink/medicine.png", color: "bg-indigo-100/20", title: "Flutter App View" },
   { id: 6, src: "/projects/ihealthlink/mobile2.jpg", color: "bg-blue-100/20", title: "Offline Entry" },
 ];
 
