@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useRef, ReactNode } from "react";
 import IHealthLinkProject from "./projects/ihealthlink";
-// import DocsProject from "./projects/docs";
+import DocsProject from "./projects/docs";
 // import MaloiInventoryProject from "./projects/maloi-inventory";
 
 // --- LOCAL SCROLL ANIMATION WRAPPER ---
@@ -64,21 +64,20 @@ export default function Projects() {
         {/* --- PROJECTS CONTAINER --- */}
         <div className="flex flex-col gap-32">
           
-          {/* Project 1 */}
+          {/* iHealthLink */}
           <FadeInSection>
             <div className="w-full">
               <IHealthLinkProject />
             </div>
           </FadeInSection>
 
-          {/* Future Project Placeholder 
+          {/* DOCS */}
           <FadeInSection>
             <div className="w-full">
               <DocsProject />
             </div>
           </FadeInSection>
-          */}
-
+          
         </div>
 
       </div>

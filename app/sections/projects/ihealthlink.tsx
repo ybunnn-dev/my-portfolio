@@ -101,9 +101,24 @@ export default function IHealthLinkProject() {
             <p>
               iHealthLink is a comprehensive Barangay Healthcare Management System developed to streamline local health administration and resident management. The platform modernizes record-keeping by replacing traditional paper trails with a highly responsive, unified digital ecosystem.
             </p>
-            <p>
-              The system features extensive resident enrollment modules, intelligent backend logic, and a seamless mobile synchronization architecture. To ensure strict data integrity across multiple devices, the synchronization logic explicitly prioritizes server-side IDs during record lookup, falling back to local IDs only in the event that the server ID is definitively not found.
-            </p>
+            
+            <div className="mt-6 bg-white/5 rounded-lg p-5 border border-white/10">
+              <h3 className="text-white font-bold mb-3">Key Features & Architecture:</h3>
+              <ul className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                {[
+                  "Extensive resident enrollment modules",
+                  "Intelligent backend logic",
+                  "Seamless mobile synchronization",
+                  "Strict cross-device data integrity",
+                  "Server-side ID prioritized sync resolution"
+                ].map((feature, i) => (
+                  <li key={i} className="flex items-start gap-2 text-white/80 text-sm md:text-base">
+                    <div className="w-1.5 h-1.5 rounded-full bg-cyan-400 mt-2 flex-shrink-0"></div>
+                    <span>{feature}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
         </div>
 
