@@ -9,7 +9,9 @@ const PROJECT_IMAGES = [
   { id: 3, src: "/projects/ihealthlink/resident.png", color: "bg-sky-100/20", title: "Mobile Sync Module" },
   { id: 4, src: "/projects/ihealthlink/maternity.png", color: "bg-teal-100/20", title: "Health Records" },
   { id: 5, src: "/projects/ihealthlink/medicine.png", color: "bg-indigo-100/20", title: "Flutter App View" },
-  { id: 6, src: "/projects/ihealthlink/mobile2.jpg", color: "bg-blue-100/20", title: "Offline Entry" },
+  { id: 6, src: "/projects/ihealthlink/app_home.png", color: "bg-blue-100/20", title: "Offline Entry" },
+  { id: 7, src: "/projects/ihealthlink/household_list.jpg", color: "bg-blue-100/20", title: "List" },
+  { id: 8, src: "/projects/ihealthlink/family.jpg", color: "bg-blue-100/20", title: "Family" },
 ];
 
 export default function IHealthLinkProject() {
@@ -25,16 +27,19 @@ export default function IHealthLinkProject() {
       {/* --- TOP SECTION: WIDE GALLERY --- */}
       <div className="w-full flex flex-col lg:flex-row gap-2">
         
-        {/* Main Display View */}
-        <div className="relative group w-full lg:w-2/3 aspect-video lg:aspect-auto lg:min-h-[400px] rounded-lg overflow-hidden flex-shrink-0 bg-black/10 dark:bg-black/20">
-          <div key={activeIndex} className={`relative w-full h-full flex items-center justify-center animate-fade-in ${activeImage.color}`}>
-            <span className="absolute inset-0 flex items-center justify-center text-white/50 text-xl md:text-3xl font-bold tracking-wider z-10 text-center px-4 mix-blend-overlay">
+        {/* MAIN PREVIEW CONTAINER */}
+        <div className="relative group w-full lg:w-2/3 aspect-video rounded-lg overflow-hidden flex-shrink-0 bg-black">
+          <div key={activeIndex} className="relative w-full h-full flex items-center justify-center animate-fade-in">
+            {/* Background Title Overlay */}
+            <span className="absolute inset-0 flex items-center justify-center text-white/30 text-xl md:text-3xl font-bold tracking-wider z-10 text-center px-4">
               {activeImage.title}
             </span>
+            
+            {/* Image Set to object-contain */}
             <img 
               src={activeImage.src} 
               alt={activeImage.title} 
-              className="relative w-full h-full object-cover z-20"
+              className="relative w-full h-full object-contain z-20"
               onError={(e) => { e.currentTarget.style.display = 'none'; }}
             />
           </div>
@@ -48,7 +53,7 @@ export default function IHealthLinkProject() {
           </button>
         </div>
 
-        {/* Thumbnails Grid */}
+        {/* THUMBNAILS CONTAINER */}
         <div className="w-full lg:w-1/3 grid grid-cols-3 lg:grid-cols-2 xl:grid-cols-3 gap-2 content-start">
           {PROJECT_IMAGES.map((img, index) => {
             const isActive = index === activeIndex;
@@ -56,11 +61,11 @@ export default function IHealthLinkProject() {
               <button
                 key={img.id}
                 onClick={() => setActiveIndex(index)}
-                className={`relative w-full aspect-square rounded-lg overflow-hidden transition-all duration-300 border ${
+                className={`relative w-full aspect-square rounded-lg overflow-hidden transition-all duration-300 border bg-black ${
                   isActive 
                     ? "border-white opacity-100 scale-[0.98]" 
                     : "border-transparent opacity-60 hover:opacity-100"
-                } bg-black/10`}
+                }`}
               >
                 <span className="absolute inset-0 flex items-center justify-center text-white text-[10px] font-bold z-10 text-center px-1 mix-blend-overlay">
                   {img.title}
@@ -119,7 +124,11 @@ export default function IHealthLinkProject() {
               </li>
               <li className="flex items-start gap-3 text-white/90 text-base drop-shadow-sm">
                 <CheckCircle2 className="w-5 h-5 text-white flex-shrink-0 mt-0.5" />
-                <span>System Architecture & DB Design</span>
+                <span>Group Leader</span>
+              </li>
+              <li className="flex items-start gap-3 text-white/90 text-base drop-shadow-sm">
+                <CheckCircle2 className="w-5 h-5 text-white flex-shrink-0 mt-0.5" />
+                <span>Project Manager</span>
               </li>
             </ul>
           </div>

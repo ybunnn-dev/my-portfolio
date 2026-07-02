@@ -204,7 +204,6 @@ export default function Home() {
               ))}
             </div>
 
-            {/* Interactive Sun/Moon Dark Mode Toggle */}
             <button 
               onClick={toggleDarkMode}
               className="p-2 rounded-full text-cyan-900 dark:text-gray-300 hover:bg-cyan-50 dark:hover:bg-slate-800 transition-colors focus:outline-none min-w-[36px] min-h-[36px] flex items-center justify-center"
