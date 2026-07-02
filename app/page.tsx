@@ -162,7 +162,6 @@ export default function Home() {
     { id: "experience", label: "Experience" },
     { id: "tech-stack", label: "Tech Stack" },
     { id: "projects", label: "Projects" },
-    { id: "gallery", label: "Gallery" },
   ];
 
 
