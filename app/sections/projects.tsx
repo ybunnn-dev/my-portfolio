@@ -3,6 +3,8 @@
 import { useState, useEffect, useRef, ReactNode } from "react";
 import IHealthLinkProject from "./projects/ihealthlink";
 import DocsProject from "./projects/docs";
+import CodeFlow from "./projects/codeflow";
+import MyGradeTrackProject from "./projects/mygradetrack";
 // import MaloiInventoryProject from "./projects/maloi-inventory";
 
 // --- LOCAL SCROLL ANIMATION WRAPPER ---
@@ -77,6 +79,19 @@ export default function Projects() {
               <DocsProject />
             </div>
           </FadeInSection>
+          
+          <FadeInSection>
+            <div className="w-full">
+              <MyGradeTrackProject/>
+            </div>
+          </FadeInSection>
+          
+          <FadeInSection>
+            <div className="w-full">
+              <CodeFlow />
+            </div>
+          </FadeInSection>
+
           
         </div>
 

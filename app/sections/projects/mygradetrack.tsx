@@ -4,11 +4,15 @@ import { useState } from "react";
 import { ChevronLeft, ChevronRight, Calendar, User, Layers, CheckCircle2 } from "lucide-react";
 
 const PROJECT_IMAGES = [
-  { id: 1, src: "/projects/docs/page1.jpeg", color: "bg-blue-100/20", title: "Document Operations - Page 1" },
-  { id: 2, src: "/projects/docs/page2.jpeg", color: "bg-cyan-100/20", title: "Document Operations - Page 2" },
+  { id: 1, src: "/projects/mygradetrack/dashboard.png", color: "bg-blue-100/20", title: "Main Dashboard" },
+  { id: 2, src: "/projects/mygradetrack/grades.png", color: "bg-cyan-100/20", title: "Grades View" },
+  { id: 3, src: "/projects/mygradetrack/add-sem.png", color: "bg-sky-100/20", title: "Add Semester" },
+  { id: 4, src: "/projects/mygradetrack/add-course.png", color: "bg-teal-100/20", title: "Add Course" },
+  { id: 5, src: "/projects/mygradetrack/edit-sem.png", color: "bg-indigo-100/20", title: "Edit Semester" },
+  { id: 6, src: "/projects/mygradetrack/edit-course.png", color: "bg-blue-100/20", title: "Edit Course" },
 ];
 
-export default function DocsProject() {
+export default function MyGradeTrackProject() {
   const [activeIndex, setActiveIndex] = useState(0);
   const activeImage = PROJECT_IMAGES[activeIndex];
 
@@ -48,7 +52,7 @@ export default function DocsProject() {
         </div>
 
         {/* THUMBNAILS CONTAINER */}
-        <div className="w-full lg:w-1/3 grid grid-cols-2 gap-2 content-start">
+        <div className="w-full lg:w-1/3 grid grid-cols-3 lg:grid-cols-2 xl:grid-cols-3 gap-2 content-start">
           {PROJECT_IMAGES.map((img, index) => {
             const isActive = index === activeIndex;
             return (
@@ -83,32 +87,28 @@ export default function DocsProject() {
         <div className="w-full lg:w-2/3 flex flex-col">
           <div className="mb-6 border-b border-white/20 pb-4">
             <h1 className="text-3xl md:text-4xl font-extrabold text-white tracking-tight drop-shadow-sm">
-              DOCS 2.0
+              MyGradeTrack
             </h1>
-            <h2 className="text-lg md:text-xl text-white/70 font-medium mt-1">
-              Document Operations and Communication System
-            </h2>
             <div className="flex items-center gap-2 mt-3 text-cyan-50 font-medium drop-shadow-sm">
               <Calendar className="w-4 h-4" />
-              <span>February 2026 - May 2026</span>
+              <span>Pre-Capstone Practice Project</span>
             </div>
           </div>
 
           <div className="space-y-4 text-white/90 leading-relaxed text-base md:text-lg drop-shadow-sm">
             <p>
-              Built and improved a comprehensive web-based system designed for DOST-V to efficiently manage and track document operations and internal communications. The platform facilitates a smooth workflow across units by automating critical routing and notification processes.
+              I built MyGradeTrack as a personal utility to automatically compute and monitor my academic progress. Beyond just tracking grades, it served as a dedicated practice ground to strengthen my grasp on Laravel's ecosystem before stepping up to our more complex capstone project.
             </p>
             
             <div className="mt-6 bg-white/5 rounded-lg p-5 border border-white/10">
               <h3 className="text-white font-bold mb-3">Key Features:</h3>
               <ul className="grid grid-cols-1 md:grid-cols-2 gap-3">
                 {[
-                  "Manage documents efficiently",
-                  "Track timelines and actions",
-                  "Automated Reference Number Generation",
-                  "Automated Acknowledgement Receipts",
-                  "Workflow automation & notifications",
-                  "User-friendly redesigned interface"
+                  "Interactive statistics dashboard",
+                  "Automated overall GWA computation",
+                  "GWA tracking per semester",
+                  "Built-in honor/dean's list indicator",
+                  "Course and semester management"
                 ].map((feature, i) => (
                   <li key={i} className="flex items-start gap-2 text-white/80 text-sm md:text-base">
                     <div className="w-1.5 h-1.5 rounded-full bg-cyan-400 mt-2 flex-shrink-0"></div>
@@ -125,6 +125,7 @@ export default function DocsProject() {
           
           {/* Role Box */}
           <div className="relative overflow-hidden flex-1">
+           
             <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-2 drop-shadow-sm">
               <User className="w-5 h-5 text-white" />
               Role
@@ -132,7 +133,7 @@ export default function DocsProject() {
             <ul className="space-y-3 relative z-10">
               <li className="flex items-start gap-3 text-white/90 text-base drop-shadow-sm">
                 <CheckCircle2 className="w-5 h-5 text-white flex-shrink-0 mt-0.5" />
-                <span>Assistant Full-Stack Developer</span>
+                <span>Solo Developer</span>
               </li>
               <li className="flex items-start gap-3 text-white/90 text-base drop-shadow-sm">
                 <CheckCircle2 className="w-5 h-5 text-white flex-shrink-0 mt-0.5" />
@@ -149,8 +150,7 @@ export default function DocsProject() {
             </h3>
             <div className="flex flex-wrap gap-2">
               {[
-                'Laravel', 'MariaDB', 'Alpine.js', 'TailwindCSS', 
-                'Flowbite', 'ApexChart', 'Discord Webhook', 'Figma'
+                'Laravel', 'TailwindCSS', 'Alpine.js', 'MariaDB', 'PHP'
               ].map((tech) => (
                 <span 
                   key={tech} 
