@@ -107,13 +107,7 @@ export default function ProfileSection() {
           <div className="flex flex-wrap items-center justify-center md:justify-start gap-6">
             
             {/* Changed to 'a' tag to enable actual file downloading */}
-            <a 
-              href="/Belaro_Resume.pdf" 
-              download="John_Ivan_Belaro_Resume.pdf"
-              className="bg-cyan-700 dark:bg-gray-700 hover:bg-cyan-800 dark:hover:bg-gray-600 text-white text-xs px-6 py-3 rounded-lg font-semibold transition-colors shadow-lg text-center cursor-pointer"
-            >
-              Download Resume
-            </a>
+            
                         
             <div className="flex items-center gap-5 text-cyan-800 dark:text-gray-300">
               
